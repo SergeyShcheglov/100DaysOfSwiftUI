@@ -46,15 +46,32 @@ struct Checkerboard: Shape {
 struct ContentView: View {
     @State private var rows = 4
     @State private var columns = 4
+    @State private var changeView = false
     
     var body: some View {
-      Checkerboard(rows: rows, columns: columns)
+        NavigationView{
+            Checkerboard(rows: rows, columns: columns)
             .onTapGesture {
                 withAnimation(.linear(duration: 3)) {
                     rows = 8
                     columns = 16
                 }
             }
+            .sheet(isPresented: $changeView) {
+                SpirographView()
+            }
+            
+            .toolbar {
+                Button {
+                    changeView.toggle()
+                } label: {
+                    Image(systemName: "switch.2")
+                    Text("tap")
+                }
+            }
+
+        }
+        
     }
 }
 
