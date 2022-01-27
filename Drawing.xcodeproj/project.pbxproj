@@ -12,6 +12,8 @@
 		015E9F32279FEF8000B17B1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 015E9F31279FEF8000B17B1E /* Assets.xcassets */; };
 		015E9F35279FEF8000B17B1E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 015E9F34279FEF8000B17B1E /* Preview Assets.xcassets */; };
 		015E9F3C27A14FE900B17B1E /* SpirographView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E9F3B27A14FE900B17B1E /* SpirographView.swift */; };
+		015E9F3E27A27C5000B17B1E /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E9F3D27A27C5000B17B1E /* ArrowView.swift */; };
+		015E9F4027A2843E00B17B1E /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E9F3F27A2843E00B17B1E /* RectangleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		015E9F31279FEF8000B17B1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		015E9F34279FEF8000B17B1E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		015E9F3B27A14FE900B17B1E /* SpirographView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpirographView.swift; sourceTree = "<group>"; };
+		015E9F3D27A27C5000B17B1E /* ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
+		015E9F3F27A2843E00B17B1E /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 			children = (
 				015E9F2D279FEF7E00B17B1E /* DrawingApp.swift */,
 				015E9F2F279FEF7E00B17B1E /* ContentView.swift */,
+				015E9F3D27A27C5000B17B1E /* ArrowView.swift */,
+				015E9F3F27A2843E00B17B1E /* RectangleView.swift */,
 				015E9F3B27A14FE900B17B1E /* SpirographView.swift */,
 				015E9F31279FEF8000B17B1E /* Assets.xcassets */,
 				015E9F33279FEF8000B17B1E /* Preview Content */,
@@ -140,9 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				015E9F3E27A27C5000B17B1E /* ArrowView.swift in Sources */,
 				015E9F30279FEF7E00B17B1E /* ContentView.swift in Sources */,
 				015E9F3C27A14FE900B17B1E /* SpirographView.swift in Sources */,
 				015E9F2E279FEF7E00B17B1E /* DrawingApp.swift in Sources */,
+				015E9F4027A2843E00B17B1E /* RectangleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

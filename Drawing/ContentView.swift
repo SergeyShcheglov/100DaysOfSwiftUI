@@ -46,10 +46,43 @@ struct Checkerboard: Shape {
 struct ContentView: View {
     @State private var rows = 4
     @State private var columns = 4
-    @State private var changeView = false
+    @State private var checkboardView = false
+    @State private var arrowView = false
+    @State private var rectangleView = false
+    @State private var spirographView = false
     
     var body: some View {
-        NavigationView{
+        NavigationView {
+            VStack {
+                HStack {
+                    Button("Checkboard") {
+                        checkboardView.toggle()
+                        arrowView = false
+                        rectangleView = false
+                        spirographView = false
+                    }
+                    Button("Arrow") {
+                        arrowView.toggle()
+                        checkboardView = false
+                        rectangleView = false
+                        spirographView = false
+                    }
+                    Button("Rectangle") {
+                        rectangleView.toggle()
+                        arrowView = false
+                        checkboardView = false
+                        spirographView = false
+                    }
+                    Button("Spirograph") {
+                        spirographView.toggle()
+                        arrowView = false
+                        rectangleView = false
+                        checkboardView = false
+                    }
+                }
+                
+            //some code with if conditions to switch views
+                
             Checkerboard(rows: rows, columns: columns)
             .onTapGesture {
                 withAnimation(.linear(duration: 3)) {
@@ -57,18 +90,39 @@ struct ContentView: View {
                     columns = 16
                 }
             }
-            .sheet(isPresented: $changeView) {
+        }
+            .navigationTitle("Drawing")
+            .sheet(isPresented: $checkboardView) {
+                ContentView()
+            }
+            .sheet(isPresented: $arrowView) {
+                ArrowView()
+            }
+            .sheet(isPresented: $rectangleView) {
+                RectangleView()
+            }
+            .sheet(isPresented: $spirographView) {
                 SpirographView()
             }
             
-            .toolbar {
-                Button {
-                    changeView.toggle()
-                } label: {
-                    Image(systemName: "switch.2")
-                    Text("tap")
-                }
-            }
+//            .toolbar {
+//                ToolbarItem(placement: .navigationBarLeading) {
+//                Button {
+//                    changeView.toggle()
+//                } label: {
+//                    Image(systemName: "switch.2")
+//                    Text("tap")
+//                }
+//                }
+//                ToolbarItem(placement: .navigationBarTrailing) {
+//                    Button {
+//                        RectangleView()
+//                    } label: {
+//                        Image(systemName: "r.circle")
+//
+//                    }
+//                }
+//            }
 
         }
         
